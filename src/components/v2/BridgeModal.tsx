@@ -2,7 +2,7 @@
 import Link from "next/link";
 import {Dispatch , SetStateAction} from 'react';
 import { Bridge } from "@/utils/bridge";
-
+import { useZoomerValue } from '@/hooks/useZoomerValue'
 interface IBridgeModal {
  bridges : any[];
  amountIn : number ;
@@ -14,6 +14,7 @@ interface IBridgeModal {
 }
 
 const BridgeModal = ({bridges , amountIn , setModal , setBridge , textcolor , destinationChain , currentbridge} : IBridgeModal ) => {
+  const zoomerUsdValue = useZoomerValue()
   return (
     <div
           className={`p-[1rem] bg-white   min-h-max rounded-2xl lg:w-[30%] w-[80%] sm:w-[50%] md:w-[40%] pb-10 pt-2 relative `}
@@ -67,7 +68,7 @@ const BridgeModal = ({bridges , amountIn , setModal , setBridge , textcolor , de
                           : "0"}
                       </span>
                     </div>
-                    <p className={`text-xs text-black/40`}>$0.00</p>
+                    <p className={`text-xs text-black/40`}>${(Number(amountIn) * 0.9995 * zoomerUsdValue).toFixed(4)}</p>
                   </div>
                 </div>
                 <div

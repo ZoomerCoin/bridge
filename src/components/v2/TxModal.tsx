@@ -2,6 +2,7 @@
 import {Dispatch , SetStateAction} from 'react';
 import Link from "next/link";
 import {formatEther} from "viem";
+import { useNativeValue } from '@/hooks/useNativeValue'
 type TxModalProps = {
   txHash: string;
   bridge: string;
@@ -10,6 +11,7 @@ type TxModalProps = {
   amountIn : number;
   textcolor : string
   setApprovalNeeded: Dispatch<SetStateAction<boolean>>;
+  originChain : number
 };
 const TxModal = ({
   txHash ,
@@ -18,8 +20,10 @@ const TxModal = ({
   fee,
   amountIn,
   textcolor,
-  setApprovalNeeded
+  setApprovalNeeded,
+  originChain
 }: TxModalProps) => {
+  const nativeCurrencyValue = useNativeValue(originChain as number || 1 )
   return (
     <div
       className={`w-full min-h-screen bg-black/30 flex items-center justify-center`}
@@ -53,7 +57,7 @@ const TxModal = ({
           </div>
           <div className={`flex items-center w-full justify-between`}>
             <span>Fees</span>
-            <span>{Number(formatEther(BigInt(fee))).toFixed(5)}</span>
+            <span>{'$'+(nativeCurrencyValue * Number(formatEther(BigInt(fee)))).toFixed(2)}</span>
           </div>
           <div className={`flex items-center w-full justify-between`}>
             <span>You will receive</span>

@@ -59,7 +59,8 @@ import { Bridge, bridgeConfig, getApproveToByBridge } from "@/utils/bridge";
 import Link from "next/link";
 import Selector from "@/components/v2/Selector";
 import BridgeModal from "@/components/v2/BridgeModal";
-
+import { useZoomerValue } from '@/hooks/useZoomerValue'
+import { useNativeValue } from '@/hooks/useNativeValue'
 //-------------------------INTERFACES------------------
 interface Iprops {
   params: { bridgeTo: string };
@@ -92,6 +93,7 @@ export default function Page({ params }: Iprops) {
   >();
   const [originChain, setOriginChain] = useState<number | undefined>();
   const [bridge, setBridge] = useState<Bridge>();
+  // const [nativeValue ,  setNativeValue] = useState<number>(0)
   // const [selectorOpen, setSelectorOpen] = useState<boolean>(false)
   const [open, setOpen] = useState<boolean>(false);
   const [connext, setConnext] = useState<
@@ -100,7 +102,10 @@ export default function Page({ params }: Iprops) {
   const pubClient = usePublicClient();
 
   const amountIn = useDebounce(_amountIn, 500);
-  const router = useRouter();
+  const router = useRouter()
+  const zoomerUsdValue = useZoomerValue()
+  const nativeCurrencyValue = useNativeValue(originChain as number || 1 )
+  
   useEffect(() => {
     const run = async () => {
       if (!walletClient?.account?.address) {
@@ -419,7 +424,7 @@ export default function Page({ params }: Iprops) {
                     className={`text-sm focus:outline-none  placeholder:text-end text-end w-full`}
                   />
 
-                  <p className={`text-xs text-black/40`}>$0.00</p>
+                  <p className={`text-xs text-black/40`}>${(+amountIn * zoomerUsdValue).toFixed(4)}</p>
                 </div>
               </div>
               {/* first box ends here */}
@@ -467,7 +472,7 @@ export default function Page({ params }: Iprops) {
                     </span>
                   </div>
 
-                  <p className={`text-xs text-black/40`}>$0.00</p>
+                  <p className={`text-xs text-black/40`}>${(Number(amountIn) * 0.9995 * zoomerUsdValue).toFixed(4)}</p>
                 </div>
               </div>
               {/* second box ends here here */}
@@ -479,17 +484,19 @@ export default function Page({ params }: Iprops) {
                     color: textcolor,
                     backgroundColor: textcolor + "1a",
                   }}
-                  className={`w-full -translate-y-2 px-4  flex items-center justify-start rounded-b-2xl gap-2 mt-0  text-sm `}
+                  className={`w-full -translate-y-2 px-3  flex items-center justify-start rounded-b-2xl gap-2 mt-0  text-[11px]  truncate`}
                 >
-                  <div className={` flex  `}>
+                  <div className={` flex gap-x-1 `}>
                     {relayerFeeLoading && originChain
                       ? "..."
                       : Number(formatEther(BigInt(relayerFee))).toFixed(4)}{" "}
-                    {walletClient?.chain?.id
+                    {walletClient?.chain?.id && !relayerFeeLoading
                       ? configByAsset[asset].chains.find(
                           (chain) => chain?.id === walletClient?.chain?.id
-                        )?.nativeCurrency?.symbol
+                        )?.nativeCurrency?.symbol 
                       : "???"}
+                  <span>({relayerFeeLoading && originChain ? "..." : '$'+(nativeCurrencyValue * Number(formatEther(BigInt(relayerFee)))).toFixed(2)})</span>
+
                   </div>
                   <span>&bull;</span>
                   <span className={` uppercase `}>
@@ -713,6 +720,7 @@ const ActionButtons = ({
           txModal={txModal}
           textcolor={textcolor}
           setApprovalNeeded={setApprovalNeeded}
+          originChain={originChain}
         />
       )}
     </div>
@@ -844,6 +852,7 @@ type BridgeButtonProps = {
   txModal: boolean;
   textcolor: string;
   setApprovalNeeded: Dispatch<SetStateAction<boolean>>;
+  originChain : number
 };
 const BridgeButton = ({
   walletChain,
@@ -858,6 +867,7 @@ const BridgeButton = ({
   txModal,
   textcolor,
   setApprovalNeeded,
+  originChain
 }: BridgeButtonProps) => {
   const [xcallLoading, setXCallLoading] = useState(false);
   const [xcallTxHash, setXCallTxHash] = useState<Hash | undefined>();
@@ -978,6 +988,7 @@ const BridgeButton = ({
           amountIn={+amountIn}
           textcolor={textcolor}
           setApprovalNeeded={setApprovalNeeded}
+          originChain={originChain}
         />
       </div>
     </>

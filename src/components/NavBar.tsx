@@ -50,7 +50,7 @@ export const NavBar = () => {
         />
       )}
       <div className={`w-[30%] flex justify-end`}>
-        <ConnectButton />
+        <ConnectButton colorTheme={pathname === "/" ? 'bg-black' : 'bg-white/20'}/>
       </div>
     </div>
   );
