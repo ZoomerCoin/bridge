@@ -2,7 +2,6 @@ import Link from "next/link";
 
 const SolanaDescription = () => {
   return (
-
     <div className={` px-[22px]`}>
       Bridging to and from Solana requires using Wormhole Portal Bridge (for
       now).
@@ -16,6 +15,7 @@ const SolanaDescription = () => {
       <Link
         href="https://portalbridge.com/advanced-tools/#/transfer"
         className={`text-blue-400 underline`}
+        target="_blank"
       >
         Wormhole Portal Bridge
       </Link>
@@ -30,6 +30,7 @@ const SolanaDescription = () => {
       <Link
         href="https://etherscan.io/token/0x0D505C03d30e65f6e9b4Ef88855a47a89e4b7676"
         className={`text-blue-400 underline`}
+        target="_blank"
       >
         0x0D505C03d30e65f6e9b4Ef88855a47a89e4b7676
       </Link>
@@ -39,6 +40,7 @@ const SolanaDescription = () => {
       <Link
         href="https://solscan.io/token/nBZEcHSG771mRbi4y2sSgKjfDUH8jsM2Eo5fNcASLeU"
         className={`text-blue-400 underline`}
+        target="_blank"
       >
         nBZEcHSG771mRbi4y2sSgKjfDUH8jsM2Eo5fNcASLeU
       </Link>
@@ -51,7 +53,11 @@ const SolanaDescription = () => {
       <br />
       <br />
       Still need support? Join the Zoomer{" "}
-      <Link className={`text-blue-400 underline`} href="https://t.me/zoomercoinofficial" >
+      <Link
+        className={`text-blue-400 underline`}
+        href="https://t.me/zoomercoinofficial"
+        target="_blank"
+      >
         Telegram
       </Link>{" "}
       and contact the mods.
@@ -59,4 +65,4 @@ const SolanaDescription = () => {
   );
 };
 
-export default SolanaDescription
+export default SolanaDescription;

@@ -1,5 +1,5 @@
 import { Providers } from "./providers";
-import "@/app/globals.css"
+import "@/app/globals.css";
 export const metadata = {
   title: "/BRIDGE",
 };
@@ -14,10 +14,10 @@ export default function RootLayout({
       <link rel="icon" href="/favicon.ico" sizes="any" />
       <body>
         <Providers>
-      <NavBar />
-          
+          <NavBar />
+
           {children}
-          </Providers>
+        </Providers>
       </body>
     </html>
   );

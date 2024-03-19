@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import {
   Box,
   Flex,
@@ -1209,6 +1209,7 @@ const SolanaDescription = () => {
         href="https://portalbridge.com/advanced-tools/#/transfer"
         isExternal
         color="blue.400"
+        target="_blank"
       >
         Wormhole Portal Bridge
       </Link>
