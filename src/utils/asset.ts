@@ -2,16 +2,12 @@ import { Chain } from "wagmi/chains";
 import { arbitrum, base, bsc, mainnet, optimism, polygon } from "wagmi/chains";
 import { GRUMPY_BLUE, ZOOMER_YELLOW } from "./colors";
 import {
-  bridgeAddress,
-  cciPxErc20BridgeAddress,
   grumpyCatCoinAddress,
   grumpyCatLockboxAdapterAddress,
   zoomerCoinAddress,
-  zoomerXerc20LockboxBaseAddress,
 } from "../generated";
 import { Address, Hex, encodeAbiParameters } from "viem";
 import { BUY_GRUMPYCAT_LINK, BUY_ZOOMER_LINK } from "./constants";
-import { Bridge } from "./bridge";
 
 export type AssetConfig = {
   chains: Chain[];
