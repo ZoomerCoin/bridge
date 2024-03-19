@@ -39,7 +39,6 @@ import {
 } from "viem";
 import { SdkBase, SdkConfig, SdkUtils, create } from "@connext/sdk-core";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import Image from "next/image";
 import { chainIdToDomain } from "@connext/nxtp-utils";
 import TxModal from "@/components/v2/TxModal";
 import { useDebounce } from "@/hooks/useDebounce";
@@ -47,20 +46,16 @@ import {
   cciPxErc20BridgeAbi,
   cciPxErc20BridgeAddress,
   useReadErc20BalanceOf,
-  useReadZoomerXerc20OldBalanceOf,
   zoomerCoinAddress,
   zoomerXerc20LockboxBaseAbi,
   zoomerXerc20LockboxBaseAddress,
 } from "@/generated";
 import { Asset, configByAsset, getAddressByAsset, solana } from "@/utils/asset";
-import { wagmiConfig } from "@/wagmi";
-import { ZOOMER_YELLOW } from "@/utils/colors";
 import { Bridge, bridgeConfig, getApproveToByBridge } from "@/utils/bridge";
-import Link from "next/link";
 import Selector from "@/components/v2/Selector";
 import BridgeModal from "@/components/v2/BridgeModal";
-import { useZoomerValue } from '@/hooks/useZoomerValue'
-import { useNativeValue } from '@/hooks/useNativeValue'
+import { useZoomerValue } from "@/hooks/useZoomerValue";
+import { useNativeValue } from "@/hooks/useNativeValue";
 //-------------------------INTERFACES------------------
 interface Iprops {
   params: { bridgeTo: string };
@@ -102,10 +97,10 @@ export default function Page({ params }: Iprops) {
   const pubClient = usePublicClient();
 
   const amountIn = useDebounce(_amountIn, 500);
-  const router = useRouter()
-  const zoomerUsdValue = useZoomerValue()
-  const nativeCurrencyValue = useNativeValue(originChain as number || 1 )
-  
+  const router = useRouter();
+  const zoomerUsdValue = useZoomerValue();
+  const nativeCurrencyValue = useNativeValue((originChain as number) || 1);
+
   useEffect(() => {
     const run = async () => {
       if (!walletClient?.account?.address) {
@@ -424,7 +419,9 @@ export default function Page({ params }: Iprops) {
                     className={`text-sm focus:outline-none  placeholder:text-end text-end w-full`}
                   />
 
-                  <p className={`text-xs text-black/40`}>${(+amountIn * zoomerUsdValue).toFixed(4)}</p>
+                  <p className={`text-xs text-black/40`}>
+                    ${(+amountIn * zoomerUsdValue).toFixed(4)}
+                  </p>
                 </div>
               </div>
               {/* first box ends here */}
@@ -440,7 +437,12 @@ export default function Page({ params }: Iprops) {
                 <div
                   className={` flex w-max items-center justify-start gap-x-2 `}
                 >
-                  <span className="capitalize font-bold">You Receive</span>
+                  <div className={` flex flex-col `}>
+                    <span className="capitalize font-bold">You Receive</span>
+                    <span className="capitalize text-xs">
+                      Click to Select Bridge
+                    </span>
+                  </div>
                 </div>
                 <div
                   className={` ml-auto  flex flex-col items-end justify-end`}
@@ -472,7 +474,9 @@ export default function Page({ params }: Iprops) {
                     </span>
                   </div>
 
-                  <p className={`text-xs text-black/40`}>${(Number(amountIn) * 0.9995 * zoomerUsdValue).toFixed(4)}</p>
+                  <p className={`text-xs text-black/40`}>
+                    ${(Number(amountIn) * 0.9995 * zoomerUsdValue).toFixed(4)}
+                  </p>
                 </div>
               </div>
               {/* second box ends here here */}
@@ -493,10 +497,19 @@ export default function Page({ params }: Iprops) {
                     {walletClient?.chain?.id && !relayerFeeLoading
                       ? configByAsset[asset].chains.find(
                           (chain) => chain?.id === walletClient?.chain?.id
-                        )?.nativeCurrency?.symbol 
+                        )?.nativeCurrency?.symbol
                       : "???"}
-                  <span>({relayerFeeLoading && originChain ? "..." : '$'+(nativeCurrencyValue * Number(formatEther(BigInt(relayerFee)))).toFixed(2)})</span>
-
+                    <span>
+                      (
+                      {relayerFeeLoading && originChain
+                        ? "..."
+                        : "$" +
+                          (
+                            nativeCurrencyValue *
+                            Number(formatEther(BigInt(relayerFee)))
+                          ).toFixed(2)}
+                      )
+                    </span>
                   </div>
                   <span>&bull;</span>
                   <span className={` uppercase `}>
@@ -852,7 +865,7 @@ type BridgeButtonProps = {
   txModal: boolean;
   textcolor: string;
   setApprovalNeeded: Dispatch<SetStateAction<boolean>>;
-  originChain : number
+  originChain: number;
 };
 const BridgeButton = ({
   walletChain,
@@ -867,7 +880,7 @@ const BridgeButton = ({
   txModal,
   textcolor,
   setApprovalNeeded,
-  originChain
+  originChain,
 }: BridgeButtonProps) => {
   const [xcallLoading, setXCallLoading] = useState(false);
   const [xcallTxHash, setXCallTxHash] = useState<Hash | undefined>();
