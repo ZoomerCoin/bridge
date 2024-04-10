@@ -1,3 +1,4 @@
+"use client";
 import {
   Box,
   Flex,
@@ -51,6 +52,7 @@ import {
   useWaitForTransactionReceipt,
   useWalletClient,
 } from "wagmi";
+//@ts-ignore
 import { switchChain } from "@wagmi/core";
 import { arbitrum, base, bsc, mainnet, optimism, polygon } from "wagmi/chains";
 import {
@@ -461,7 +463,8 @@ export const BridgeUI = ({ asset, setAsset }: BridgeUIProps) => {
                 )}
               </Flex>
             )}
-            <Flex>
+
+            {/* <Flex>
               <Spacer />
               <Image
                 src={
@@ -474,7 +477,7 @@ export const BridgeUI = ({ asset, setAsset }: BridgeUIProps) => {
                 width={156}
               />
               <Spacer />
-            </Flex>
+            </Flex> */}
           </VStack>
         </CardBody>
       </Card>
@@ -1206,6 +1209,7 @@ const SolanaDescription = () => {
         href="https://portalbridge.com/advanced-tools/#/transfer"
         isExternal
         color="blue.400"
+        target="_blank"
       >
         Wormhole Portal Bridge
       </Link>
