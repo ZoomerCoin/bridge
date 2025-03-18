@@ -123,37 +123,36 @@ export const bridgeAbi = [
     name: 'Unpaused',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [],
     name: 'acceptOwnership',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [
       { name: '', internalType: 'enum Bridge.BridgeType', type: 'uint8' },
     ],
     name: 'bridges',
     outputs: [{ name: '', internalType: 'address', type: 'address' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [{ name: '', internalType: 'uint32', type: 'uint32' }],
     name: 'connextChainIdToDomain',
     outputs: [{ name: '', internalType: 'uint32', type: 'uint32' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'fee',
     outputs: [{ name: '', internalType: 'uint32', type: 'uint32' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: '_fee', internalType: 'uint32', type: 'uint32' },
@@ -166,37 +165,37 @@ export const bridgeAbi = [
     ],
     name: 'initialize',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'owner',
     outputs: [{ name: '', internalType: 'address', type: 'address' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'paused',
     outputs: [{ name: '', internalType: 'bool', type: 'bool' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'pendingOwner',
     outputs: [{ name: '', internalType: 'address', type: 'address' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [],
     name: 'renounceOwnership',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'payable',
     type: 'function',
     inputs: [
       { name: '_token', internalType: 'address', type: 'address' },
@@ -213,9 +212,9 @@ export const bridgeAbi = [
     ],
     name: 'sendThroughBridge',
     outputs: [],
+    stateMutability: 'payable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       {
@@ -227,9 +226,9 @@ export const bridgeAbi = [
     ],
     name: 'setBridge',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: '_chainId', internalType: 'uint32[]', type: 'uint32[]' },
@@ -237,23 +236,23 @@ export const bridgeAbi = [
     ],
     name: 'setDomains',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [{ name: '_fee', internalType: 'uint32', type: 'uint32' }],
     name: 'setFee',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [{ name: 'newOwner', internalType: 'address', type: 'address' }],
     name: 'transferOwnership',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: '_token', internalType: 'address', type: 'address' },
@@ -262,6 +261,7 @@ export const bridgeAbi = [
     ],
     name: 'withdraw',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
 ] as const
 
@@ -297,16 +297,15 @@ export const bridgeConfig = { address: bridgeAddress, abi: bridgeAbi } as const
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const cciPxErc20BridgeAbi = [
   {
-    stateMutability: 'nonpayable',
     type: 'constructor',
     inputs: [
       { name: '_router', internalType: 'address', type: 'address' },
@@ -314,6 +313,7 @@ export const cciPxErc20BridgeAbi = [
       { name: '_xerc20', internalType: 'address', type: 'address' },
       { name: '_feeBps', internalType: 'uint256', type: 'uint256' },
     ],
+    stateMutability: 'nonpayable',
   },
   {
     type: 'error',
@@ -462,14 +462,13 @@ export const cciPxErc20BridgeAbi = [
     name: 'OwnershipTransferred',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [],
     name: 'acceptOwnership',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: '_chainSelector', internalType: 'uint64', type: 'uint64' },
@@ -477,9 +476,9 @@ export const cciPxErc20BridgeAbi = [
     ],
     name: 'addBridgeForChain',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: '_chainId', internalType: 'uint32', type: 'uint32' },
@@ -487,9 +486,9 @@ export const cciPxErc20BridgeAbi = [
     ],
     name: 'addChainIdToChainSelector',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'payable',
     type: 'function',
     inputs: [
       { name: '_destinationChainId', internalType: 'uint32', type: 'uint32' },
@@ -498,9 +497,9 @@ export const cciPxErc20BridgeAbi = [
     ],
     name: 'bridgeTokens',
     outputs: [{ name: 'messageId', internalType: 'bytes32', type: 'bytes32' }],
+    stateMutability: 'payable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: '_destinationChainId', internalType: 'uint32', type: 'uint32' },
@@ -509,16 +508,16 @@ export const cciPxErc20BridgeAbi = [
     ],
     name: 'bridgeTokensWithLINK',
     outputs: [{ name: 'messageId', internalType: 'bytes32', type: 'bytes32' }],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [{ name: '', internalType: 'uint64', type: 'uint64' }],
     name: 'bridgesByChain',
     outputs: [{ name: '', internalType: 'address', type: 'address' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       {
@@ -548,23 +547,23 @@ export const cciPxErc20BridgeAbi = [
     ],
     name: 'ccipReceive',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [{ name: '', internalType: 'uint32', type: 'uint32' }],
     name: 'chainIdToChainSelector',
     outputs: [{ name: '', internalType: 'uint64', type: 'uint64' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'feeBps',
     outputs: [{ name: '', internalType: 'uint256', type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [
       { name: '_destinationChainId', internalType: 'uint32', type: 'uint32' },
@@ -573,9 +572,9 @@ export const cciPxErc20BridgeAbi = [
     ],
     name: 'getFee',
     outputs: [{ name: '', internalType: 'uint256', type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'getLastReceivedMessageDetails',
@@ -583,60 +582,60 @@ export const cciPxErc20BridgeAbi = [
       { name: 'messageId', internalType: 'bytes32', type: 'bytes32' },
       { name: 'text', internalType: 'string', type: 'string' },
     ],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'getRouter',
     outputs: [{ name: '', internalType: 'address', type: 'address' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'linkToken',
     outputs: [{ name: '', internalType: 'contract IERC20', type: 'address' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'owner',
     outputs: [{ name: '', internalType: 'address', type: 'address' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [{ name: '_feeBps', internalType: 'uint256', type: 'uint256' }],
     name: 'setFeeBps',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'pure',
     type: 'function',
     inputs: [{ name: 'interfaceId', internalType: 'bytes4', type: 'bytes4' }],
     name: 'supportsInterface',
     outputs: [{ name: '', internalType: 'bool', type: 'bool' }],
+    stateMutability: 'pure',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [{ name: 'to', internalType: 'address', type: 'address' }],
     name: 'transferOwnership',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: '_beneficiary', internalType: 'address', type: 'address' },
     ],
     name: 'withdraw',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: '_beneficiary', internalType: 'address', type: 'address' },
@@ -644,40 +643,41 @@ export const cciPxErc20BridgeAbi = [
     ],
     name: 'withdrawToken',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'xerc20',
     outputs: [{ name: '', internalType: 'contract IXERC20', type: 'address' }],
+    stateMutability: 'view',
   },
-  { stateMutability: 'payable', type: 'receive' },
+  { type: 'receive', stateMutability: 'payable' },
 ] as const
 
 /**
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const cciPxErc20BridgeAddress = {
-  1: '0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308',
+  1: '0x5B39b483DDa8bae818989F6bCC9c18E99d103478',
   10: '0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a',
   56: '0x840854c007c1E5F64074350beECa088F8a8e48BF',
   137: '0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51',
-  8453: '0x083178fBB5d6dd6521fe778BcfC32BF898678fAe',
+  8453: '0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602',
   42161: '0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a',
 } as const
 
 /**
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const cciPxErc20BridgeConfig = {
@@ -698,7 +698,6 @@ export const cciPxErc20BridgeConfig = {
  */
 export const grumpyCatCoinAbi = [
   {
-    stateMutability: 'nonpayable',
     type: 'constructor',
     inputs: [
       { name: '_maxWalletTimer', internalType: 'uint256', type: 'uint256' },
@@ -706,6 +705,7 @@ export const grumpyCatCoinAbi = [
       { name: '_CEXWallet', internalType: 'address', type: 'address' },
       { name: '_end', internalType: 'uint256', type: 'uint256' },
     ],
+    stateMutability: 'nonpayable',
   },
   {
     type: 'event',
@@ -782,14 +782,13 @@ export const grumpyCatCoinAbi = [
     name: 'Transfer',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [{ name: 'toPair', internalType: 'address', type: 'address' }],
     name: 'addPair',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: 'recipients', internalType: 'address[]', type: 'address[]' },
@@ -797,16 +796,16 @@ export const grumpyCatCoinAbi = [
     ],
     name: 'airdrop',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'airdropLimit',
     outputs: [{ name: '', internalType: 'uint256', type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [
       { name: 'owner', internalType: 'address', type: 'address' },
@@ -814,9 +813,9 @@ export const grumpyCatCoinAbi = [
     ],
     name: 'allowance',
     outputs: [{ name: '', internalType: 'uint256', type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: 'spender', internalType: 'address', type: 'address' },
@@ -824,39 +823,39 @@ export const grumpyCatCoinAbi = [
     ],
     name: 'approve',
     outputs: [{ name: '', internalType: 'bool', type: 'bool' }],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [{ name: 'account', internalType: 'address', type: 'address' }],
     name: 'balanceOf',
     outputs: [{ name: '', internalType: 'uint256', type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [{ name: 'amount', internalType: 'uint256', type: 'uint256' }],
     name: 'burn',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'burntGrumpyCat',
     outputs: [
       { name: '', internalType: 'contract BurntGrumpyCat', type: 'address' },
     ],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'decimals',
     outputs: [{ name: '', internalType: 'uint8', type: 'uint8' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: 'spender', internalType: 'address', type: 'address' },
@@ -864,9 +863,9 @@ export const grumpyCatCoinAbi = [
     ],
     name: 'decreaseAllowance',
     outputs: [{ name: '', internalType: 'bool', type: 'bool' }],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: 'spender', internalType: 'address', type: 'address' },
@@ -874,58 +873,58 @@ export const grumpyCatCoinAbi = [
     ],
     name: 'increaseAllowance',
     outputs: [{ name: '', internalType: 'bool', type: 'bool' }],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'maxWallet',
     outputs: [{ name: '', internalType: 'uint256', type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'maxWalletTimer',
     outputs: [{ name: '', internalType: 'uint256', type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'name',
     outputs: [{ name: '', internalType: 'string', type: 'string' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'owner',
     outputs: [{ name: '', internalType: 'address', type: 'address' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [],
     name: 'renounceOwnership',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'symbol',
     outputs: [{ name: '', internalType: 'string', type: 'string' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'totalSupply',
     outputs: [{ name: '', internalType: 'uint256', type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: 'to', internalType: 'address', type: 'address' },
@@ -933,9 +932,9 @@ export const grumpyCatCoinAbi = [
     ],
     name: 'transfer',
     outputs: [{ name: '', internalType: 'bool', type: 'bool' }],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: 'from', internalType: 'address', type: 'address' },
@@ -944,13 +943,14 @@ export const grumpyCatCoinAbi = [
     ],
     name: 'transferFrom',
     outputs: [{ name: '', internalType: 'bool', type: 'bool' }],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [{ name: 'newOwner', internalType: 'address', type: 'address' }],
     name: 'transferOwnership',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
 ] as const
 
@@ -990,7 +990,6 @@ export const grumpyCatCoinConfig = {
  */
 export const grumpyCatLockboxAdapterAbi = [
   {
-    stateMutability: 'nonpayable',
     type: 'constructor',
     inputs: [
       { name: '_connext', internalType: 'address', type: 'address' },
@@ -998,6 +997,7 @@ export const grumpyCatLockboxAdapterAbi = [
       { name: '_erc20', internalType: 'address', type: 'address' },
       { name: '_xerc20', internalType: 'address', type: 'address' },
     ],
+    stateMutability: 'nonpayable',
   },
   {
     type: 'error',
@@ -1005,30 +1005,29 @@ export const grumpyCatLockboxAdapterAbi = [
     name: 'XReceiver__onlyConnext',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'connext',
     outputs: [{ name: '', internalType: 'contract IConnext', type: 'address' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'erc20',
     outputs: [{ name: '', internalType: 'contract IERC20', type: 'address' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'lockbox',
     outputs: [
       { name: '', internalType: 'contract IXERC20Lockbox', type: 'address' },
     ],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: '_transferId', internalType: 'bytes32', type: 'bytes32' },
@@ -1040,9 +1039,9 @@ export const grumpyCatLockboxAdapterAbi = [
     ],
     name: 'xReceive',
     outputs: [{ name: '', internalType: 'bytes', type: 'bytes' }],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'payable',
     type: 'function',
     inputs: [
       { name: '_destination', internalType: 'uint32', type: 'uint32' },
@@ -1055,13 +1054,14 @@ export const grumpyCatLockboxAdapterAbi = [
     ],
     name: 'xcall',
     outputs: [{ name: '', internalType: 'bytes32', type: 'bytes32' }],
+    stateMutability: 'payable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'xerc20',
     outputs: [{ name: '', internalType: 'contract IXERC20', type: 'address' }],
+    stateMutability: 'view',
   },
 ] as const
 
@@ -1202,21 +1202,20 @@ export const zoomerCoinAbi = [
     name: 'Transfer',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'DOMAIN_SEPARATOR',
     outputs: [{ name: '', internalType: 'bytes32', type: 'bytes32' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'FACTORY',
     outputs: [{ name: '', internalType: 'address', type: 'address' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [
       { name: 'owner', internalType: 'address', type: 'address' },
@@ -1224,9 +1223,9 @@ export const zoomerCoinAbi = [
     ],
     name: 'allowance',
     outputs: [{ name: '', internalType: 'uint256', type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: 'spender', internalType: 'address', type: 'address' },
@@ -1234,16 +1233,16 @@ export const zoomerCoinAbi = [
     ],
     name: 'approve',
     outputs: [{ name: '', internalType: 'bool', type: 'bool' }],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [{ name: 'account', internalType: 'address', type: 'address' }],
     name: 'balanceOf',
     outputs: [{ name: '', internalType: 'uint256', type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [{ name: '', internalType: 'address', type: 'address' }],
     name: 'bridges',
@@ -1271,9 +1270,9 @@ export const zoomerCoinAbi = [
         ],
       },
     ],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: '_user', internalType: 'address', type: 'address' },
@@ -1281,30 +1280,30 @@ export const zoomerCoinAbi = [
     ],
     name: 'burn',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [{ name: '_bridge', internalType: 'address', type: 'address' }],
     name: 'burningCurrentLimitOf',
     outputs: [{ name: '_limit', internalType: 'uint256', type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [{ name: '_bridge', internalType: 'address', type: 'address' }],
     name: 'burningMaxLimitOf',
     outputs: [{ name: '_limit', internalType: 'uint256', type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'decimals',
     outputs: [{ name: '', internalType: 'uint8', type: 'uint8' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: 'spender', internalType: 'address', type: 'address' },
@@ -1312,9 +1311,9 @@ export const zoomerCoinAbi = [
     ],
     name: 'decreaseAllowance',
     outputs: [{ name: '', internalType: 'bool', type: 'bool' }],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'eip712Domain',
@@ -1327,9 +1326,9 @@ export const zoomerCoinAbi = [
       { name: 'salt', internalType: 'bytes32', type: 'bytes32' },
       { name: 'extensions', internalType: 'uint256[]', type: 'uint256[]' },
     ],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: 'spender', internalType: 'address', type: 'address' },
@@ -1337,9 +1336,9 @@ export const zoomerCoinAbi = [
     ],
     name: 'increaseAllowance',
     outputs: [{ name: '', internalType: 'bool', type: 'bool' }],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: '_name', internalType: 'string', type: 'string' },
@@ -1348,16 +1347,16 @@ export const zoomerCoinAbi = [
     ],
     name: 'initialize',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'lockbox',
     outputs: [{ name: '', internalType: 'address', type: 'address' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: '_user', internalType: 'address', type: 'address' },
@@ -1365,44 +1364,44 @@ export const zoomerCoinAbi = [
     ],
     name: 'mint',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [{ name: '_bridge', internalType: 'address', type: 'address' }],
     name: 'mintingCurrentLimitOf',
     outputs: [{ name: '_limit', internalType: 'uint256', type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [{ name: '_bridge', internalType: 'address', type: 'address' }],
     name: 'mintingMaxLimitOf',
     outputs: [{ name: '_limit', internalType: 'uint256', type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'name',
     outputs: [{ name: '', internalType: 'string', type: 'string' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [{ name: 'owner', internalType: 'address', type: 'address' }],
     name: 'nonces',
     outputs: [{ name: '', internalType: 'uint256', type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'owner',
     outputs: [{ name: '', internalType: 'address', type: 'address' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: 'owner', internalType: 'address', type: 'address' },
@@ -1415,16 +1414,16 @@ export const zoomerCoinAbi = [
     ],
     name: 'permit',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [],
     name: 'renounceOwnership',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: '_bridge', internalType: 'address', type: 'address' },
@@ -1433,30 +1432,30 @@ export const zoomerCoinAbi = [
     ],
     name: 'setLimits',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [{ name: '_lockbox', internalType: 'address', type: 'address' }],
     name: 'setLockbox',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'symbol',
     outputs: [{ name: '', internalType: 'string', type: 'string' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'totalSupply',
     outputs: [{ name: '', internalType: 'uint256', type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: 'to', internalType: 'address', type: 'address' },
@@ -1464,9 +1463,9 @@ export const zoomerCoinAbi = [
     ],
     name: 'transfer',
     outputs: [{ name: '', internalType: 'bool', type: 'bool' }],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: 'from', internalType: 'address', type: 'address' },
@@ -1475,13 +1474,14 @@ export const zoomerCoinAbi = [
     ],
     name: 'transferFrom',
     outputs: [{ name: '', internalType: 'bool', type: 'bool' }],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [{ name: 'newOwner', internalType: 'address', type: 'address' }],
     name: 'transferOwnership',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
 ] as const
 
@@ -1524,12 +1524,12 @@ export const zoomerCoinConfig = {
  */
 export const zoomerMigratorAbi = [
   {
-    stateMutability: 'nonpayable',
     type: 'constructor',
     inputs: [
       { name: '_oldZoomer', internalType: 'address', type: 'address' },
       { name: '_newZoomer', internalType: 'address', type: 'address' },
     ],
+    stateMutability: 'nonpayable',
   },
   {
     type: 'event',
@@ -1560,51 +1560,50 @@ export const zoomerMigratorAbi = [
     name: 'OwnerUpdated',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'NEW_ZOOMER',
     outputs: [{ name: '', internalType: 'contract IERC20', type: 'address' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'OLD_ZOOMER',
     outputs: [{ name: '', internalType: 'contract IERC20', type: 'address' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'authority',
     outputs: [
       { name: '', internalType: 'contract Authority', type: 'address' },
     ],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [{ name: '_amount', internalType: 'uint256', type: 'uint256' }],
     name: 'migrate',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [],
     name: 'migrate',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'owner',
     outputs: [{ name: '', internalType: 'address', type: 'address' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: '_token', internalType: 'address', type: 'address' },
@@ -1612,9 +1611,9 @@ export const zoomerMigratorAbi = [
     ],
     name: 'rescue',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       {
@@ -1625,13 +1624,14 @@ export const zoomerMigratorAbi = [
     ],
     name: 'setAuthority',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [{ name: 'newOwner', internalType: 'address', type: 'address' }],
     name: 'setOwner',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
 ] as const
 
@@ -1659,13 +1659,13 @@ export const zoomerMigratorConfig = {
  */
 export const zoomerXerc20LockboxAllAbi = [
   {
-    stateMutability: 'nonpayable',
     type: 'constructor',
     inputs: [
       { name: '_xerc20', internalType: 'address', type: 'address' },
       { name: '_erc20', internalType: 'address', type: 'address' },
       { name: '_isNative', internalType: 'bool', type: 'bool' },
     ],
+    stateMutability: 'nonpayable',
   },
   { type: 'error', inputs: [], name: 'IXERC20Lockbox_Native' },
   { type: 'error', inputs: [], name: 'IXERC20Lockbox_NotNative' },
@@ -1709,49 +1709,48 @@ export const zoomerXerc20LockboxAllAbi = [
     name: 'Withdraw',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'ERC20',
     outputs: [{ name: '', internalType: 'contract IERC20', type: 'address' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'IS_NATIVE',
     outputs: [{ name: '', internalType: 'bool', type: 'bool' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'XERC20',
     outputs: [{ name: '', internalType: 'contract IXERC20', type: 'address' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [{ name: '_amount', internalType: 'uint256', type: 'uint256' }],
     name: 'deposit',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'payable',
     type: 'function',
     inputs: [],
     name: 'depositNative',
     outputs: [],
+    stateMutability: 'payable',
   },
   {
-    stateMutability: 'payable',
     type: 'function',
     inputs: [{ name: '_to', internalType: 'address', type: 'address' }],
     name: 'depositNativeTo',
     outputs: [],
+    stateMutability: 'payable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: '_to', internalType: 'address', type: 'address' },
@@ -1759,16 +1758,16 @@ export const zoomerXerc20LockboxAllAbi = [
     ],
     name: 'depositTo',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [{ name: '_amount', internalType: 'uint256', type: 'uint256' }],
     name: 'withdraw',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: '_to', internalType: 'address', type: 'address' },
@@ -1776,8 +1775,9 @@ export const zoomerXerc20LockboxAllAbi = [
     ],
     name: 'withdrawTo',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
-  { stateMutability: 'payable', type: 'receive' },
+  { type: 'receive', stateMutability: 'payable' },
 ] as const
 
 /**
@@ -1858,65 +1858,64 @@ export const zoomerXerc20LockboxBaseAbi = [
     name: 'Withdraw',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'ERC20',
     outputs: [{ name: '', internalType: 'contract IERC20', type: 'address' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'IS_NATIVE',
     outputs: [{ name: '', internalType: 'bool', type: 'bool' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'OWNER',
     outputs: [{ name: '', internalType: 'address', type: 'address' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'OpL1XERC20BRIDGE',
     outputs: [
       { name: '', internalType: 'contract OpL1XERC20Bridge', type: 'address' },
     ],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'XERC20',
     outputs: [{ name: '', internalType: 'contract IXERC20', type: 'address' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [{ name: '_amount', internalType: 'uint256', type: 'uint256' }],
     name: 'deposit',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'payable',
     type: 'function',
     inputs: [],
     name: 'deposit',
     outputs: [],
+    stateMutability: 'payable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [{ name: '_amount', internalType: 'uint256', type: 'uint256' }],
     name: 'depositAndBridgeToL2',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: '_xerc20', internalType: 'address', type: 'address' },
@@ -1925,31 +1924,32 @@ export const zoomerXerc20LockboxBaseAbi = [
     ],
     name: 'initialize',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [{ name: 'data', internalType: 'bytes[]', type: 'bytes[]' }],
     name: 'multicall',
     outputs: [{ name: 'results', internalType: 'bytes[]', type: 'bytes[]' }],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: '_opL1XERC20Bridge', internalType: 'address', type: 'address' },
     ],
     name: 'setOpL1XERC20Bridge',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [{ name: '_amount', internalType: 'uint256', type: 'uint256' }],
     name: 'withdraw',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
-  { stateMutability: 'payable', type: 'receive' },
+  { type: 'receive', stateMutability: 'payable' },
 ] as const
 
 /**
@@ -1987,7 +1987,7 @@ export const zoomerXerc20LockboxBaseConfig = {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 export const zoomerXerc20OldAbi = [
-  { stateMutability: 'nonpayable', type: 'constructor', inputs: [] },
+  { type: 'constructor', inputs: [], stateMutability: 'nonpayable' },
   { type: 'error', inputs: [], name: 'XERC20__addBridge_alreadyAdded' },
   { type: 'error', inputs: [], name: 'XERC20__onlyBridge_notBridge' },
   { type: 'error', inputs: [], name: 'XERC20__removeBridge_alreadyRemoved' },
@@ -2099,28 +2099,27 @@ export const zoomerXerc20OldAbi = [
     name: 'Transfer',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'DOMAIN_SEPARATOR',
     outputs: [{ name: '', internalType: 'bytes32', type: 'bytes32' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [],
     name: 'acceptProposedOwner',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [{ name: '_bridge', internalType: 'address', type: 'address' }],
     name: 'addBridge',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [
       { name: 'owner', internalType: 'address', type: 'address' },
@@ -2128,9 +2127,9 @@ export const zoomerXerc20OldAbi = [
     ],
     name: 'allowance',
     outputs: [{ name: '', internalType: 'uint256', type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: 'spender', internalType: 'address', type: 'address' },
@@ -2138,16 +2137,16 @@ export const zoomerXerc20OldAbi = [
     ],
     name: 'approve',
     outputs: [{ name: '', internalType: 'bool', type: 'bool' }],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [{ name: 'account', internalType: 'address', type: 'address' }],
     name: 'balanceOf',
     outputs: [{ name: '', internalType: 'uint256', type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: '_from', internalType: 'address', type: 'address' },
@@ -2155,16 +2154,16 @@ export const zoomerXerc20OldAbi = [
     ],
     name: 'burn',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'decimals',
     outputs: [{ name: '', internalType: 'uint8', type: 'uint8' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: 'spender', internalType: 'address', type: 'address' },
@@ -2172,16 +2171,16 @@ export const zoomerXerc20OldAbi = [
     ],
     name: 'decreaseAllowance',
     outputs: [{ name: '', internalType: 'bool', type: 'bool' }],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'delay',
     outputs: [{ name: '', internalType: 'uint256', type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'eip712Domain',
@@ -2194,9 +2193,9 @@ export const zoomerXerc20OldAbi = [
       { name: 'salt', internalType: 'bytes32', type: 'bytes32' },
       { name: 'extensions', internalType: 'uint256[]', type: 'uint256[]' },
     ],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: 'spender', internalType: 'address', type: 'address' },
@@ -2204,9 +2203,9 @@ export const zoomerXerc20OldAbi = [
     ],
     name: 'increaseAllowance',
     outputs: [{ name: '', internalType: 'bool', type: 'bool' }],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: '_owner', internalType: 'address', type: 'address' },
@@ -2215,9 +2214,9 @@ export const zoomerXerc20OldAbi = [
     ],
     name: 'initialize',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: '_to', internalType: 'address', type: 'address' },
@@ -2225,30 +2224,30 @@ export const zoomerXerc20OldAbi = [
     ],
     name: 'mint',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'name',
     outputs: [{ name: '', internalType: 'string', type: 'string' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [{ name: 'owner', internalType: 'address', type: 'address' }],
     name: 'nonces',
     outputs: [{ name: '', internalType: 'uint256', type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'owner',
     outputs: [{ name: '', internalType: 'address', type: 'address' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: 'owner', internalType: 'address', type: 'address' },
@@ -2261,67 +2260,67 @@ export const zoomerXerc20OldAbi = [
     ],
     name: 'permit',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: 'newlyProposed', internalType: 'address', type: 'address' },
     ],
     name: 'proposeNewOwner',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'proposed',
     outputs: [{ name: '', internalType: 'address', type: 'address' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'proposedTimestamp',
     outputs: [{ name: '', internalType: 'uint256', type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [{ name: '_bridge', internalType: 'address', type: 'address' }],
     name: 'removeBridge',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [],
     name: 'renounceOwnership',
     outputs: [],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'renounced',
     outputs: [{ name: '', internalType: 'bool', type: 'bool' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'symbol',
     outputs: [{ name: '', internalType: 'string', type: 'string' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'totalSupply',
     outputs: [{ name: '', internalType: 'uint256', type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: 'to', internalType: 'address', type: 'address' },
@@ -2329,9 +2328,9 @@ export const zoomerXerc20OldAbi = [
     ],
     name: 'transfer',
     outputs: [{ name: '', internalType: 'bool', type: 'bool' }],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: 'from', internalType: 'address', type: 'address' },
@@ -2340,6 +2339,7 @@ export const zoomerXerc20OldAbi = [
     ],
     name: 'transferFrom',
     outputs: [{ name: '', internalType: 'bool', type: 'bool' }],
+    stateMutability: 'nonpayable',
   },
 ] as const
 
@@ -2375,7 +2375,6 @@ export const erc20Abi = [
     name: 'Transfer',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [
       { name: 'owner', type: 'address' },
@@ -2383,9 +2382,9 @@ export const erc20Abi = [
     ],
     name: 'allowance',
     outputs: [{ type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: 'spender', type: 'address' },
@@ -2393,44 +2392,44 @@ export const erc20Abi = [
     ],
     name: 'approve',
     outputs: [{ type: 'bool' }],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [{ name: 'account', type: 'address' }],
     name: 'balanceOf',
     outputs: [{ type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'decimals',
     outputs: [{ type: 'uint8' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'name',
     outputs: [{ type: 'string' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'symbol',
     outputs: [{ type: 'string' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'view',
     type: 'function',
     inputs: [],
     name: 'totalSupply',
     outputs: [{ type: 'uint256' }],
+    stateMutability: 'view',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: 'recipient', type: 'address' },
@@ -2438,9 +2437,9 @@ export const erc20Abi = [
     ],
     name: 'transfer',
     outputs: [{ type: 'bool' }],
+    stateMutability: 'nonpayable',
   },
   {
-    stateMutability: 'nonpayable',
     type: 'function',
     inputs: [
       { name: 'sender', type: 'address' },
@@ -2449,6 +2448,7 @@ export const erc20Abi = [
     ],
     name: 'transferFrom',
     outputs: [{ type: 'bool' }],
+    stateMutability: 'nonpayable',
   },
 ] as const
 
@@ -3001,11 +3001,11 @@ export const useWatchBridgeUnpausedEvent =
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useReadCciPxErc20Bridge = /*#__PURE__*/ createUseReadContract({
@@ -3016,11 +3016,11 @@ export const useReadCciPxErc20Bridge = /*#__PURE__*/ createUseReadContract({
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"bridgesByChain"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useReadCciPxErc20BridgeBridgesByChain =
@@ -3033,11 +3033,11 @@ export const useReadCciPxErc20BridgeBridgesByChain =
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"chainIdToChainSelector"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useReadCciPxErc20BridgeChainIdToChainSelector =
@@ -3050,11 +3050,11 @@ export const useReadCciPxErc20BridgeChainIdToChainSelector =
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"feeBps"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useReadCciPxErc20BridgeFeeBps =
@@ -3067,11 +3067,11 @@ export const useReadCciPxErc20BridgeFeeBps =
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"getFee"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useReadCciPxErc20BridgeGetFee =
@@ -3084,11 +3084,11 @@ export const useReadCciPxErc20BridgeGetFee =
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"getLastReceivedMessageDetails"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useReadCciPxErc20BridgeGetLastReceivedMessageDetails =
@@ -3101,11 +3101,11 @@ export const useReadCciPxErc20BridgeGetLastReceivedMessageDetails =
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"getRouter"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useReadCciPxErc20BridgeGetRouter =
@@ -3118,11 +3118,11 @@ export const useReadCciPxErc20BridgeGetRouter =
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"linkToken"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useReadCciPxErc20BridgeLinkToken =
@@ -3135,11 +3135,11 @@ export const useReadCciPxErc20BridgeLinkToken =
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"owner"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useReadCciPxErc20BridgeOwner = /*#__PURE__*/ createUseReadContract(
@@ -3153,11 +3153,11 @@ export const useReadCciPxErc20BridgeOwner = /*#__PURE__*/ createUseReadContract(
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"supportsInterface"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useReadCciPxErc20BridgeSupportsInterface =
@@ -3170,11 +3170,11 @@ export const useReadCciPxErc20BridgeSupportsInterface =
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"xerc20"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useReadCciPxErc20BridgeXerc20 =
@@ -3187,11 +3187,11 @@ export const useReadCciPxErc20BridgeXerc20 =
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useWriteCciPxErc20Bridge = /*#__PURE__*/ createUseWriteContract({
@@ -3202,11 +3202,11 @@ export const useWriteCciPxErc20Bridge = /*#__PURE__*/ createUseWriteContract({
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"acceptOwnership"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useWriteCciPxErc20BridgeAcceptOwnership =
@@ -3219,11 +3219,11 @@ export const useWriteCciPxErc20BridgeAcceptOwnership =
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"addBridgeForChain"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useWriteCciPxErc20BridgeAddBridgeForChain =
@@ -3236,11 +3236,11 @@ export const useWriteCciPxErc20BridgeAddBridgeForChain =
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"addChainIdToChainSelector"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useWriteCciPxErc20BridgeAddChainIdToChainSelector =
@@ -3253,11 +3253,11 @@ export const useWriteCciPxErc20BridgeAddChainIdToChainSelector =
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"bridgeTokens"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useWriteCciPxErc20BridgeBridgeTokens =
@@ -3270,11 +3270,11 @@ export const useWriteCciPxErc20BridgeBridgeTokens =
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"bridgeTokensWithLINK"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useWriteCciPxErc20BridgeBridgeTokensWithLink =
@@ -3287,11 +3287,11 @@ export const useWriteCciPxErc20BridgeBridgeTokensWithLink =
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"ccipReceive"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useWriteCciPxErc20BridgeCcipReceive =
@@ -3304,11 +3304,11 @@ export const useWriteCciPxErc20BridgeCcipReceive =
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"setFeeBps"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useWriteCciPxErc20BridgeSetFeeBps =
@@ -3321,11 +3321,11 @@ export const useWriteCciPxErc20BridgeSetFeeBps =
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"transferOwnership"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useWriteCciPxErc20BridgeTransferOwnership =
@@ -3338,11 +3338,11 @@ export const useWriteCciPxErc20BridgeTransferOwnership =
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"withdraw"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useWriteCciPxErc20BridgeWithdraw =
@@ -3355,11 +3355,11 @@ export const useWriteCciPxErc20BridgeWithdraw =
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"withdrawToken"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useWriteCciPxErc20BridgeWithdrawToken =
@@ -3372,11 +3372,11 @@ export const useWriteCciPxErc20BridgeWithdrawToken =
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useSimulateCciPxErc20Bridge =
@@ -3388,11 +3388,11 @@ export const useSimulateCciPxErc20Bridge =
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"acceptOwnership"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useSimulateCciPxErc20BridgeAcceptOwnership =
@@ -3405,11 +3405,11 @@ export const useSimulateCciPxErc20BridgeAcceptOwnership =
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"addBridgeForChain"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useSimulateCciPxErc20BridgeAddBridgeForChain =
@@ -3422,11 +3422,11 @@ export const useSimulateCciPxErc20BridgeAddBridgeForChain =
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"addChainIdToChainSelector"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useSimulateCciPxErc20BridgeAddChainIdToChainSelector =
@@ -3439,11 +3439,11 @@ export const useSimulateCciPxErc20BridgeAddChainIdToChainSelector =
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"bridgeTokens"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useSimulateCciPxErc20BridgeBridgeTokens =
@@ -3456,11 +3456,11 @@ export const useSimulateCciPxErc20BridgeBridgeTokens =
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"bridgeTokensWithLINK"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useSimulateCciPxErc20BridgeBridgeTokensWithLink =
@@ -3473,11 +3473,11 @@ export const useSimulateCciPxErc20BridgeBridgeTokensWithLink =
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"ccipReceive"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useSimulateCciPxErc20BridgeCcipReceive =
@@ -3490,11 +3490,11 @@ export const useSimulateCciPxErc20BridgeCcipReceive =
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"setFeeBps"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useSimulateCciPxErc20BridgeSetFeeBps =
@@ -3507,11 +3507,11 @@ export const useSimulateCciPxErc20BridgeSetFeeBps =
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"transferOwnership"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useSimulateCciPxErc20BridgeTransferOwnership =
@@ -3524,11 +3524,11 @@ export const useSimulateCciPxErc20BridgeTransferOwnership =
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"withdraw"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useSimulateCciPxErc20BridgeWithdraw =
@@ -3541,11 +3541,11 @@ export const useSimulateCciPxErc20BridgeWithdraw =
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `functionName` set to `"withdrawToken"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useSimulateCciPxErc20BridgeWithdrawToken =
@@ -3558,11 +3558,11 @@ export const useSimulateCciPxErc20BridgeWithdrawToken =
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useWatchCciPxErc20BridgeEvent =
@@ -3574,11 +3574,11 @@ export const useWatchCciPxErc20BridgeEvent =
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `eventName` set to `"MessageReceived"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useWatchCciPxErc20BridgeMessageReceivedEvent =
@@ -3591,11 +3591,11 @@ export const useWatchCciPxErc20BridgeMessageReceivedEvent =
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `eventName` set to `"MessageSent"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useWatchCciPxErc20BridgeMessageSentEvent =
@@ -3608,11 +3608,11 @@ export const useWatchCciPxErc20BridgeMessageSentEvent =
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `eventName` set to `"OwnershipTransferRequested"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useWatchCciPxErc20BridgeOwnershipTransferRequestedEvent =
@@ -3625,11 +3625,11 @@ export const useWatchCciPxErc20BridgeOwnershipTransferRequestedEvent =
 /**
  * Wraps __{@link useWatchContractEvent}__ with `abi` set to __{@link cciPxErc20BridgeAbi}__ and `eventName` set to `"OwnershipTransferred"`
  *
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x2339e8e77A7FD6455fB7374bFEf8BA0E4C8C2308)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x5B39b483DDa8bae818989F6bCC9c18E99d103478)
  * - [__View Contract on Op Mainnet Optimism Explorer__](https://optimistic.etherscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  * - [__View Contract on Bnb Smart Chain Bsc Scan__](https://bscscan.com/address/0x840854c007c1E5F64074350beECa088F8a8e48BF)
  * - [__View Contract on Polygon Polygon Scan__](https://polygonscan.com/address/0xB2e04651aC165CB6D2b8B0442ab25231DEf15b51)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0x083178fBB5d6dd6521fe778BcfC32BF898678fAe)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xF93Aba36FfC4D357dD616679045C7d1bFA5e5602)
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x0337c7b958aC69A9e35b1Be47D96b8e058f9222a)
  */
 export const useWatchCciPxErc20BridgeOwnershipTransferredEvent =
